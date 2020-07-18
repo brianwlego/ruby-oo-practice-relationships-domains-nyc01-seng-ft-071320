@@ -20,27 +20,30 @@ class Ingredient
 
   def dessert
     self.dessert_instance
-  #   should return a dessert object 
-  #   for that ingredient
+    
+    # should return a dessert object 
+    # for that ingredient
   end
 
    def bakery
     self.dessert_instance.bakery_instance
-  #   should return the bakery object 
-  #   #for the bakery that uses that 
-  #   #ingredient
+    
+    # should return the bakery object 
+    # for the bakery that uses that 
+    # ingredient
    end
 
   def self.find_all_by_name(name_of_ingredient)
     self.all.select {|i| i.ingr_name == name_of_ingredient}
   end
+  
   ##################################
-  #- .find_all_by_name('chocolate') 
-  #might return ['chocolate sprinkles',
-  #'chocolate mousse', 'chocolate']
-  #- make sure you aren't just looking 
-  #for exact matches (like 'chocolate' 
-  #=='chocolate')
+  # - .find_all_by_name('chocolate') 
+  # might return ['chocolate sprinkles',
+  # 'chocolate mousse', 'chocolate']
+  # - make sure you aren't just looking 
+  # for exact matches (like 'chocolate' 
+  # =='chocolate')
 
 
 

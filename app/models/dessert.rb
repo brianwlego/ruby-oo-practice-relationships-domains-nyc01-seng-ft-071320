@@ -5,9 +5,9 @@ class Dessert
 
   @@all = []
 
-  #Intializes with the desserts 
-  #name and the bakery instances that 
-  #dessert belongs to
+  # Intializes with the desserts 
+  # name and the bakery instances that 
+  # dessert belongs to
 
   def initialize(dessert_name, bakery_instance)
     @dessert_name = dessert_name
@@ -21,6 +21,7 @@ class Dessert
 
   def ingredients
     Ingredient.all.select {|i| i.dessert_instance == self}
+    
     # should return an array of 
     # ingredients for the dessert
   end
@@ -28,15 +29,12 @@ class Dessert
   def calories
     array_ingredients = ingredients.map {|i| i.calorie_count}
     array_ingredients.sum
-    #should return a number totaling 
-    #all the calories for all the 
-    #ingredients included in that 
-    #dessert
+    
+    # should return a number totaling 
+    # all the calories for all the 
+    # ingredients included in that 
+    # dessert
   end
-
-
-
-
 
 end
 
