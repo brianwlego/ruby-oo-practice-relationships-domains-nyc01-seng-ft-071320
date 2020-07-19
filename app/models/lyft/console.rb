@@ -16,7 +16,7 @@ brian = Passenger.new("Brian")
 jefferson = Passenger.new("Jefferson")
 curtis = Passenger.new("Curtis")
 
-ride1 = Ride.new(ben, brian, 12.8)
+ride1 = Ride.new(ben, brian, 120.8)
 ride2 = Ride.new(ben, curtis, 2.3)
 ride3 = Ride.new(susan, curtis, 11.0)
 ride4 = Ride.new(richard, jefferson, 4.2)

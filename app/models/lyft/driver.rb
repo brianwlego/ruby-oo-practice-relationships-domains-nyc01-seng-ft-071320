@@ -26,11 +26,15 @@ class Driver
     # returns all rides a driver has made
   end
 
+  def total_distance
+    rides.map {|r| r.distance}.sum.round(2)
+
+    # should calculate the total distance the passenger has travelled with the service
+  end
+
   def self.mileage_cap(distance)
-    Ride.all.map do |r|
-      
-    binding.pry
-    end
+    all.select {|d| d.total_distance > distance}
+    
     # takes an argument of a distance (float) and returns all drivers who have exceeded that mileage
   end
 

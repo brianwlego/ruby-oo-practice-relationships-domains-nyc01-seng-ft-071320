@@ -33,10 +33,7 @@ class Passenger
   end
 
   def self.premium_members
-    all.each do |p|
-      distances_array = p.rides.map {|r| r.distance}.sum
-        binding.pry
-    end
+    all.select {|p| p.total_distance > 100}
     # should find all passengers who have travelled over 100 miles with the service
   end
 

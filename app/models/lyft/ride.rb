@@ -17,9 +17,8 @@ class Ride
   end
 
   def self.average_distance
-    all_distances = all.map {|r| r.distance}
-    result = (all_distances.sum)/all_distances.length
-
+    (all.map {|r| r.distance}.sum)/all.length
+    
     # should find the average distance of all rides
   end
 
