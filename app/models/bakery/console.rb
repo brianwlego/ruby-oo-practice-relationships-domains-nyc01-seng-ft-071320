@@ -7,7 +7,7 @@ require 'pry'
 
 ######################################
 
-#initialized objects to play with
+# Instances to play with
 
 pret = Bakery.new("Pret")
 magnolia = Bakery.new("Magnolia")
@@ -32,6 +32,9 @@ flour = Ingredient.new("Flour", choc_cupcakes, 8)
 butter = Ingredient.new("Butter", choc_chip_cookies, 30)
 butter1 = Ingredient.new("Butter", choc_cake, 30)
 butter2 = Ingredient.new("Butter", choc_cupcakes, 30)
+
+########################################################
+
 
 
 

@@ -25,9 +25,7 @@ relationships.* What method can I call on a movie to find all its actors, etc?
 #### Movie
 
 - .most_actors
-  - should return the movie which has the most actors in it. this is so the
-    studio knows never to hire that director again because he/she makes
-    expensive movies
+  - should return the movie which has the most actors in it. this is so the studio knows never to hire that director again because he/she makes expensive movies
 
 #### Show
 
@@ -37,11 +35,10 @@ relationships.* What method can I call on a movie to find all its actors, etc?
 #### Character
 
 - .most_appearances
-  - should return which character of film/television appears in the most films
-    or tv shows
+  - should return which character of film/television appears in the most films or tv shows
 
 #### Actor
 
 - .most_characters
-  - should return which actor has the most different characters played.
+  - should return which actor who has played the most characters.
     (probably meryl streep)
