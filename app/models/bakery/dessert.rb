@@ -27,8 +27,7 @@ class Dessert
   end
 
   def calories
-    array_ingredients = ingredients.map {|i| i.calorie_count}
-    array_ingredients.sum
+    ingredients.map {|i| i.calorie_count}.sum
     
     # should return a number totaling 
     # all the calories for all the 

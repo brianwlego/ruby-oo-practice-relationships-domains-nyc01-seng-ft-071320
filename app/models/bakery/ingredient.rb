@@ -1,7 +1,7 @@
 
 class Ingredient
 
-  attr_accessor :ingr_name, :dessert_instance, :calorie_count, :bakery_instance
+  attr_accessor :ingr_name, :dessert_instance, :calorie_count
 
   @@all = []
 
@@ -34,7 +34,14 @@ class Ingredient
    end
 
   def self.find_all_by_name(name_of_ingredient)
-    self.all.select {|i| i.ingr_name == name_of_ingredient}
+    ingr_array = []
+    all.map do |i| 
+       if i.ingr_name.include? name_of_ingredient 
+        i.ingr_name
+        ingr_array << i.ingr_name
+       end
+    end
+    ingr_array
   end
   
   ##################################

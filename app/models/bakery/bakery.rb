@@ -19,14 +19,14 @@ class Bakery
 
   def ingredients
     Ingredient.all.select {|i| i.dessert_instance.bakery_instance == self}
-
+    binding.pry
     #should return an array of 
     #ingredients for the bakery's 
     #desserts
   end
 
   def desserts
-    Dessert.all.select {|dessert| dessert.bakery_instance == self}
+    Dessert.all.select {|d| d.bakery_instance == self}
     
     # should return an array of 
     # desserts the bakery makes
@@ -44,10 +44,13 @@ class Bakery
 
   def shopping_list
     ingr_array_w_duplicates = desserts.map do |d|
+      #binding.pry
       d.ingredients.map do |i|
+        #binding.pry
         i.ingr_name
       end
     end
+    #binding.pry
     final_string = ingr_array_w_duplicates.flatten!.uniq.join(" ").to_s
 
     # should return a string of names 
